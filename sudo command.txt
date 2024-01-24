@@ -52,6 +52,22 @@ postgres=# \conninfo
 change owner
 postgres=# ALTER DATABASE {database name} OWNER TO postgres;
 
+
+to grant these privileges to your user:
+postgres=# GRANT CREATE, ALTER, DROP, INSERT, UPDATE, INDEX, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+
+most cases should be enough, add privilege only if needed, can search online mysql privileges list
+postgres=# GRANT {privilege, like above create etc....} on *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+
+
+free up any memory that the server cached as a result of the preceding CREATE USER and GRANT statements:
+FLUSH PRIVILEGES;
+
+
+Then you can exit the MySQL client:
+
+exit
+
 change data type
 ALTER TABLE table_name ALTER COLUMN column_name TYPE new_data_type;
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
