@@ -1,0 +1,3 @@
+ALTER DATABASE statement is used to modify the properties or configuration of an existing database.
+
+This statement allows you to make changes to various aspects of a database, such as its name, owner, collation, or other configuration settings.
