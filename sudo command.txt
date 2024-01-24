@@ -1,0 +1,59 @@
+sudo service postgresql start 
+sudo service postgresql stop
+
+login as postgres user
+sudo -i -u postgres
+
+-i:  login or simulate initial login option
+-u:  specify the user account under which the command(postgres) will be run
+
+
+
+to exit
+postgres@yourhostname:~$ exit 
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+To connect to a PostgreSQL database, typically use the following syntax:
+Replace username, dbname, host, and port with your actual database credentials.
+
+psql -U username -d dbname -h host -p port
+
+or
+
+psql -U username  -d dbname 
+
+or 
+
+psql -d dbname 
+
+if username matches system username:  
+psql
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+back to postgres user
+postgres=# \q 
+
+list of database
+postgres=# \l
+
+switch database
+postgres=# \c dbname
+
+list tables
+postgres=# \dt
+
+change password
+postgres=# \password sde
+
+info about the database: port user location
+postgres=# \conninfo
+
+change owner
+postgres=# ALTER DATABASE {database name} OWNER TO postgres;
+
+change data type
+ALTER TABLE table_name ALTER COLUMN column_name TYPE new_data_type;
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
