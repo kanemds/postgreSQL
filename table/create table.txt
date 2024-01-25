@@ -1,0 +1,52 @@
+CREATE TABLE customer (
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    email VARCHAR(60) NOT NULL,
+    company VARCHAR(60) NOT NULL,
+    street VARCHAR(60) NOT NULL,
+    city VARCHAR(50) NOT NULL,
+    state CHAR(2) NOT NULL,
+    zip VARCHAR(10) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    birth_date DATE null,
+    sex CHAR(1) NOT NULL,
+    date_entered TIMESTAMP NOT NULL,
+    id SERIAL PRIMARY KEY
+);
+
+NOT NUll: can not be empty
+VARCHAR: text
+
+CHAR:CHAR(2) fix length 'a ' 'ab' if value('bagfedcba') only first 2 'ba', for VARCHAR no fix length 
+
+NUMBERS
+automatically generate unique values
+smallserial :  1 to  -32,768 to 32,767
+serial: 1 to 2,147,483,647
+bigserial: 1 to 9,223,372,036,854,775,807
+INT: whole number
+numeric: numeric(20, 20) max
+DECIMAL: (number of digit, number of decimal) max decimal(20,20)
+
+
+BOOLEAN TYPES
+true, 1,t,y,yes,on
+false, 0,f,n,no,off
+null
+
+
+DATE
+DATE: year/month/day
+TIMESTAMP
+INTERVAL 
+
+other TYPES
+
+currency
+binary
+json
+range
+geometric
+arrays
+xml
+uuid

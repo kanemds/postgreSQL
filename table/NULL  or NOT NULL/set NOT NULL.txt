@@ -1,0 +1,14 @@
+ALTER TABLE {table_name}
+ALTER COLUMN {column_name} SET NOT NULL;
+
+single
+
+ALTER TABLE customer
+ALTER COLUMN first_name SET NOT NULL;
+
+multiples
+
+ALTER TABLE customer
+ALTER COLUMN first_name SET NOT NULL;
+ALTER COLUMN birth_date SET NOT NULL,
+ALTER COLUMN email SET NOT NULL;
