@@ -1,0 +1,11 @@
+
+
+default
+
+birth_date DATE,
+as
+birth_date DATE NULL,
+
+ensures schema that a column cannot contain NULL values.
+
+birth_date DATE NOT NULL
