@@ -1,0 +1,17 @@
+from NOT NULL TO NULL
+
+ALTER TABLE {table_name}
+ALTER COLUMN {column_name} DROP NOT NULL;
+
+
+single
+
+ALTER TABLE customer
+ALTER COLUMN first_name DROP NOT NULL;
+
+multiples
+
+ALTER TABLE customer
+ALTER COLUMN first_name DROP NOT NULL;
+ALTER COLUMN birth_date DROP NOT NULL;
+ALTER COLUMN last_name DROP NOT NULL;

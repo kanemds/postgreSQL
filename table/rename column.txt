@@ -1,0 +1,3 @@
+ALTER TABLE {tableName} RENAME COLUMN {column} to {new name};
+
+ALTER TABLE employees RENAME COLUMN phone_number to email;

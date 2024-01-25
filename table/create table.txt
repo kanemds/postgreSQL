@@ -1,0 +1,23 @@
+CREATE TABLE customer (
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    email VARCHAR(60) NOT NULL,
+    company VARCHAR(60) NOT NULL,
+    street VARCHAR(60) NOT NULL,
+    city VARCHAR(50) NOT NULL,
+    state CHAR(2) NOT NULL,
+    zip VARCHAR(10) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    birth_date DATE null,
+    sex CHAR(1) NOT NULL,
+    date_entered TIMESTAMP NOT NULL,
+    id SERIAL PRIMARY KEY
+);
+
+SERIAL: automatically generate unique values
+NOT NUll: can not be empty
+INT: whole number
+VARCHAR: text
+DECIMAL: (number of digit, number of decimal)
+DATE: date
+CHAR:CHAR(2) fix length 'a ' 'ab' if value('bagfedcba') only first 2 'ba', for VARCHAR no fix length 
