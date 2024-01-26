@@ -15,16 +15,21 @@ CREATE TABLE customer (
 );
 
 NOT NUll: can not be empty
-VARCHAR: text
+VARCHAR: text with max VARCHAR(255) length
+TEXT: can store any length
 
 CHAR:CHAR(2) fix length 'a ' 'ab' if value('bagfedcba') only first 2 'ba', for VARCHAR no fix length 
 
 NUMBERS
 automatically generate unique values
-smallserial :  1 to  -32,768 to 32,767
-serial: 1 to 2,147,483,647
-bigserial: 1 to 9,223,372,036,854,775,807
+smallserial :  -32,768 to 32,767
+serial: -2,147,483,647 to 2,147,483,647
+bigserial: -9,223,372,036,854,775,807 to 9,223,372,036,854,775,807
+
+other numbers
+smallint:  -32,768 to 32,767
 INT: whole number
+bigint:  -9,223,372,036,854,775,807 to 9,223,372,036,854,775,807
 numeric: numeric(20, 20) max
 DECIMAL: (number of digit, number of decimal) max decimal(20,20)
 
