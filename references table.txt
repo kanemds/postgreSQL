@@ -1,0 +1,11 @@
+how to reference other table
+reason why INTEGER is because serial wil auto generate number
+{column name} INTEGER REFERENCES {table name}(id),
+
+CREATE TABLE product(
+type_id INTEGER REFERENCES product_type(id),
+name VARCHAR(30) NOT NULL,
+supplier VARCHAR(30) NOT NULL,
+description TEXT NOT NULL,
+id SERIAL PRIMARY KEY
+);
