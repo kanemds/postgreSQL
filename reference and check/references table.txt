@@ -9,3 +9,4 @@ supplier VARCHAR(30) NOT NULL,
 description TEXT NOT NULL,
 id SERIAL PRIMARY KEY
 );
+

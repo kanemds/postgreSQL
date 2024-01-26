@@ -5,3 +5,16 @@ or
 
 DELETE FROM customer
 WHERE email = 'john@gmail.com';
+
+or 
+
+TRUNCATE TABLE your_table_name;
+
+Speed: TRUNCATE is faster than DELETE as it minimizes undo and redo log generation.
+
+Reset Identity Columns: TRUNCATE resets the associated sequence for serial or identity columns.
+
+Cannot Be Rolled Back: Unlike DELETE, TRUNCATE is not transaction-safe and cannot be rolled back.
+
+Permissions: The user executing TRUNCATE needs the TRUNCATE privilege on the table.
+
