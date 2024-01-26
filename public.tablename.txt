@@ -1,0 +1,6 @@
+SELECT * FROM myschema.customer;
+
+
+by default SELECT * FROM public.customer;
+
+but there is nothing to do with private and public security problem
