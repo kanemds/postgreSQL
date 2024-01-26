@@ -1,0 +1,8 @@
+SELECT enumlabel
+FROM pg_enum
+WHERE enumtypid = 'name'::regtype;
+
+
+SELECT enumlabel
+FROM pg_enum
+WHERE enumtypid = 'sex_type'::regtype;

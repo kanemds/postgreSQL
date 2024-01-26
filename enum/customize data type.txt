@@ -1,0 +1,20 @@
+customize the data type:
+
+CREATE TYPE {given the type name } AS ENUM ('set of data','set of data');
+
+FOR existing data type: USING COLUMN_name::new_enum_type;
+
+ALTER TABLE customer ALTER COLUMN sex TYPE sex_type USING sex::sex_type;
+
+
+For new column:
+
+CREATE TYPE day_of_week AS ENUM ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+
+instead regular data type, using day_of_week
+CREATE TABLE weekly_schedule (
+    id serial PRIMARY KEY,
+    day day_of_week
+);
+
+INSERT INTO weekly_schedule (day) VALUES ('Monday'), ('Wednesday'), ('Friday');
