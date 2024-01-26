@@ -1,0 +1,3 @@
+ALTER TABLE referencing_table ADD CONSTRAINT your_fk_constraint_name FOREIGN KEY (referencing_column) REFERENCES product_type(product_type_id);
+
+ALTER TABLE product ADD CONSTRAINT product_type_id_fkey FOREIGN KEY (type_id) REFERENCES product_type(id);

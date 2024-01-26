@@ -1,0 +1,5 @@
+fk_constraint_name can find on TABLE->constraints
+
+ALTER TABLE {TABLE name } DROP CONSTRAINT {fk_constraint_name};
+
+ALTER TABLE product DROP CONSTRAINT product_type_id_fkey;

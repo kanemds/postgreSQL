@@ -1,0 +1,31 @@
+
+
+Constraints in a database enforce rules on columns to ensure data integrity.
+
+
+Key types include:
+
+Primary Key: Uniquely identifies each row.
+Foreign Key: Links tables, ensuring referential integrity.
+Unique: Enforces uniqueness in specified columns.
+Check: Validates data against conditions.
+Not Null: Ensures a column doesn't contain null values.
+Constraints maintain data consistency, prevent errors, and support 
+
+if you don't provide one explicitly name.
+
+In PostgreSQL, when create a foreign key constraint on a column, 
+the system automatically generates a default name for that constraint
+
+The default name is constructed based on a combination of the table name,
+column name, and a suffix that indicates the type of constraint.
+
+<referencing_table>_<referencing_column>_<suffix>
+
+Breaking it down:
+
+product_type: The name of the referenced table.
+id: The name of the referenced column.
+fkey: A suffix indicating that it's a foreign key constraint.
+
+

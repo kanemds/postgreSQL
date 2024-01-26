@@ -1,0 +1,6 @@
+The TRUNCATE TABLE command is used to quickly delete all rows from a table.
+It retains the table structure, indexes, constraints, and permissions but removes all data.
+
+TRUNCATE TABLE {tableName};
+
+TRUNCATE TABLE transaction;

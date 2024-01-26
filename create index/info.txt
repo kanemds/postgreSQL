@@ -1,0 +1,6 @@
+Without an index on the name column, a full table scan to find the match.
+
+With an index on the name column,  use the index to quickly find match.
+
+
+
