@@ -1,0 +1,1 @@
+the ENUM data type allows you to define a static set of values
