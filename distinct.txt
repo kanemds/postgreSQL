@@ -1,0 +1,29 @@
+
+filter out duplicate info
+SELECT DISTINCT {column}
+FROM {table};
+ORDER BY {column};
+
+
+SELECT DISTINCT state
+FROM customer;
+ORDER BY state;
+
+state
+CA 
+GA 
+IL 
+NJ 
+TX 
+
+
+
+SELECT DISTINCT state
+FROM customer
+where state != 'CA'
+ORDER BY state;
+
+GA 
+IL 
+NJ 
+TX 

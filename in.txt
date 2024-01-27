@@ -1,0 +1,9 @@
+find method, 
+
+find who is in 'CA'
+
+SELECT  state,first_name
+FROM customer
+where state IN ('CA')
+ORDER BY state;
+
