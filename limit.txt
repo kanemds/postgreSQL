@@ -1,0 +1,9 @@
+SELECT * FROM customer
+WHERE {condition}
+ORDER BY id DESC
+LIMIT {number}
+
+SELECT * FROM customer
+WHERE {condition}
+ORDER BY id ASC
+LIMIT {number}

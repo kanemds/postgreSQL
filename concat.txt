@@ -1,0 +1,15 @@
+
+concat 2 columns into one new column called name, also includes their phone and state.
+SELECT concat('{column name}', ' ', 'column name') AS Name (become new column), phone,state
+FROM customer
+WHERE state = 'TX';
+
+
+
+
+
+
+
+SELECT concat('first_name', ' ', 'last_name') AS Name, phone,state
+FROM customer
+WHERE state = 'TX';

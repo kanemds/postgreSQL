@@ -1,0 +1,25 @@
+ use aggregate functions such as SUM, COUNT, AVG, etc.
+ must use GROUP BY
+
+group by must use the SELECT column 
+SELECT product_id, SUM(price) AS Total
+FROM item 
+where product_id = 1
+GROUP BY product_id; <--- product_id if using the total does not work
+
+product_id   total
+1	           656.44
+
+
+SELECT product_id,size, SUM(price) AS Total
+FROM item 
+where product_id = 1
+GROUP BY product_id, size; <---- product_id and size
+
+product_id    size              total
+1	            8(different)	    139.73
+1	            9(different)      119.61
+1	            10(different)	    114.36
+1	            12(different)	    282.74
+
+the group by will find the different and group them into individual group 

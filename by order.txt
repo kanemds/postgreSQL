@@ -1,5 +1,7 @@
 SELECT * FROM customer
+WHERE {condition}
 ORDER BY id DESC
 
 SELECT * FROM customer
+WHERE {condition}
 ORDER BY id ASC
