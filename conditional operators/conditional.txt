@@ -1,0 +1,7 @@
+SELECT * FROM {table name}
+where {column name} {operator} {requirement};
+
+
+
+SELECT * FROM sales_item
+where discount > .15;

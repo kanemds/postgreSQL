@@ -1,0 +1,8 @@
+ALTER TABLE {table name}
+ALTER COLUMN {column name} TYPE {data type},
+ALTER COLUMN {column name} SET DEFAULT {value};
+
+
+ALTER TABLE sales_person
+ALTER COLUMN state TYPE CHAR(3),
+ALTER COLUMN state SET DEFAULT 'NY';
