@@ -1,0 +1,18 @@
+SELECT item_id,price
+FROM item  INNER JOIN sales_item
+ON item.id = sales_item.id AND price > 120.00
+ORDER BY item_id;
+
+
+the SELECT can be from both column
+
+left table INNER JOIN right table                  
+FROM {table} INNER JOIN {table}
+
+condition for these tables that matches 
+ON 
+
+add condition for those column who meet the requirement
+AND
+
+ORDER BY {column};
