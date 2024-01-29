@@ -1,0 +1,25 @@
+
+the selected columns must have the same data types 
+and in the same order
+
+UNION requires the columns to be matched.
+
+example both selected column are in the same order
+
+SELECT first_name, last_name,street, city, zip, birth_date
+FROM customer
+WHERE EXTRACT(MONTH FROM birth_date) = 12
+UNION
+SELECT first_name, last_name,street, city, zip, birth_date
+FROM sales_person
+WHERE EXTRACT(MONTH FROM birth_date) = 12
+ORDER BY birth_date;
+
+
+both customer and sales_person on the same list
+results:
+
+fn        ln          street      city          birth_date
+James	    Martinez	  831 Oak St	Brownsville	  78521	1927-12-22
+Jessica	  Thompson	  691 Third   Place	Sylmar	91342	1938-12-18
+Lauren	  Wilson	    942 Fifth   Ave	Mission	  78572	1965-12-26
