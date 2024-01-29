@@ -24,3 +24,11 @@ _ = one of any of individual word
 SELECT first_name, last_name
 FROM customer
 WHERE first_name SIMILAR TO 'A_____';
+
+//////////////////////////////////////////////////////////
+
+'%n' = very last word is 'n'
+
+SELECT first_name, last_name
+FROM customer
+WHERE first_name SIMILAR TO 'D%' or last_name SIMILAR TO '%n';
