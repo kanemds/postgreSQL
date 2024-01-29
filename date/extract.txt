@@ -1,0 +1,12 @@
+
+EXTRACT() is only for date time value
+
+EXTRACT(YEAR FROM order_date) AS Year
+EXTRACT(MONTH FROM birth_date) AS Month
+
+etc...
+
+
+SELECT EXTRACT(MONTH FROM birth_date) AS Month, COUNT(*) AS Amount
+FROM customer
+GROUP BY Month;
