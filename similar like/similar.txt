@@ -1,0 +1,26 @@
+
+
+both work as LIKE
+
+SIMILAR TO:
+
+'M%' => find words start with M or more after
+
+'M' or 'Mabc'
+
+SELECT first_name, last_name
+FROM customer
+WHERE first_name SIMILAR TO 'M%';
+
+
+//////////////////////////////////////////////////////////
+
+_ = one of any of individual word 
+
+'A _ _' = any words starts with A and 2 letters come after
+
+'A _ _ _ _ _' = any words starts with A and 5 letters come after
+
+SELECT first_name, last_name
+FROM customer
+WHERE first_name SIMILAR TO 'A_____';
