@@ -1,0 +1,9 @@
+show one of the table in the case below:
+
+show all item columns 
+even if no matches are found
+
+SELECT name, supplier, price
+FROM product RIGHT JOIN item 
+ON item.product_id = product.id
+ORDER BY name;
