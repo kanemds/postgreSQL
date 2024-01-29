@@ -25,3 +25,10 @@ WHERE last_name ~ 'ez$';
 SELECT first_name, last_name
 FROM customer
 WHERE last_name ~ 'ez|son';
+
+~ = search
+'[w - z]' = matches any single character within the range
+
+SELECT first_name, last_name
+FROM customer
+WHERE last_name ~ '[w-z]';
