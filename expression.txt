@@ -1,0 +1,27 @@
+
+~ syntax is search for expression
+
+~ = search
+
+'^Ma' = start string with Ma 
+
+
+SELECT first_name, last_name
+FROM customer
+WHERE first_name ~ '^Ma';
+
+
+
+~ = search
+'ez$' = last string is 'ez'
+
+SELECT first_name, last_name
+FROM customer
+WHERE last_name ~ 'ez$';
+
+~ = search
+| = or
+
+SELECT first_name, last_name
+FROM customer
+WHERE last_name ~ 'ez|son';

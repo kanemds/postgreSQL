@@ -1,0 +1,16 @@
+
+SELECT product_id, price
+FROM item
+WHERE price = NULL;
+
+SELECT product_id, price
+FROM item
+WHERE price IS NOT NULL;
+
+important!!!
+
+this won't work
+
+SELECT product_id, price
+FROM item
+WHERE price != NULL;

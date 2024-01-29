@@ -1,0 +1,29 @@
+
+both work as SIMILAR TO
+
+SELECT first_name, last_name
+FROM customer
+WHERE first_name LIKE 'M%';
+
+
+
+//////////////////////////////////////////////////////////
+
+_ = one of any of individual word 
+
+'A _ _' = any words starts with A and 2 letters come after
+
+'A _ _ _ _ _' = any words starts with A and 5 letters come after
+
+
+SELECT first_name, last_name
+FROM customer
+WHERE first_name LIKE 'A_____';
+
+//////////////////////////////////////////////////////////
+
+'%n' = very last word is 'n'
+
+SELECT first_name, last_name
+FROM customer
+WHERE first_name LIKE 'D%' or last_name LIKE '%n';
