@@ -1,0 +1,33 @@
+
+case study
+CREATE OR REPLACE FUNCTION fn_number_customers()
+RETURNS numeric AS
+$$
+    SELECT COUNT(*)
+    FROM customer;
+$$
+LANGUAGE SQL
+
+error message
+return type mismatch in function declared to return numeric
+
+
+
+check type 
+
+SELECT pg_typeof(COUNT(*)) FROM customer;
+
+display:
+
+pg_typeof
+bigint
+
+
+CREATE OR REPLACE FUNCTION fn_number_customers()
+RETURNS BIGINT AS <----change to BIGINT
+$$
+    SELECT COUNT(*)
+    FROM customer;
+$$
+LANGUAGE SQL
+
