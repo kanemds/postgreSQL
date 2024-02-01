@@ -1,0 +1,43 @@
+
+Changing column properties using the ALTER TABLE statement involves modifying aspects of a column's definition, such as its data type, default value, constraints, or making it NOT NULL. Here are some examples:
+
+Changing Data Type:
+
+sql
+Copy code
+ALTER TABLE sales_person
+ALTER COLUMN state TYPE VARCHAR(255);
+This changes the data type of the "state" column to VARCHAR(255).
+
+Adding a Default Value:
+
+sql
+Copy code
+ALTER TABLE sales_person
+ALTER COLUMN state SET DEFAULT 'Unknown';
+This sets a default value of 'Unknown' for the "state" column.
+
+Adding a Constraint:
+
+sql
+Copy code
+ALTER TABLE sales_person
+ADD CONSTRAINT check_state_length CHECK (LENGTH(state) <= 50);
+This adds a length constraint to the "state" column.
+
+Making a Column Nullable:
+
+sql
+Copy code
+ALTER TABLE sales_person
+ALTER COLUMN state DROP NOT NULL;
+This allows the "state" column to have NULL values.
+
+However, these examples are not updating the existing data in the table but rather modifying the structure or properties of the table itself. If you want to update the actual data in the table, you need to use the UPDATE statement, as demonstrated in your previous example:
+
+sql
+Copy code
+UPDATE sales_person
+SET state = 'B.C'
+WHERE state IS NULL;
+This statement updates the "state" column for specific rows in the "sales_person" table based on a condition. It doesn't alter the structure of the table but modifies the values within it.

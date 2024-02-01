@@ -1,0 +1,36 @@
+create a new function 
+CREATE OR REPLACE FUNCTION fn_add_ints(int, int)
+RETURNS int as <---- return type as integer
+$$
+SELECT $1 + $2;
+$$
+LANGUAGE SQL
+
+
+
+
+SELECT fn_add_ints(3,4);
+
+
+return null by using RETURNS void
+CREATE OR REPLACE FUNCTION fn_update_employee_state()
+RETURNS void as <---- no return value but updating data use void
+$$
+    UPDATE sales_person
+    SET state = 'B.C'
+    WHERE state is null
+$$
+LANGUAGE SQL
+
+SELECT fn_update_employee_state();
+
+
+CREATE OR REPLACE FUNCTION fn_update_employee_state(): This line creates (or replaces if it already exists) a function named fn_update_employee_state.
+
+RETURNS void: Specifies that the function returns void, meaning it doesn't return any value. The purpose of this function seems to be to perform an update operation rather than to produce a result.
+
+AS $$ ... $$: Delimiters for the body of the function, which contains the SQL code.
+
+UPDATE sales_person SET state = 'B.C' WHERE state IS NULL;: The SQL statement inside the function body. It updates the "state" column in the "sales_person" table, setting it to 'B.C' for all rows where the "state" is currently NULL.
+
+LANGUAGE SQL: Specifies that the language of the function is SQL.
