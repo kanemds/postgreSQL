@@ -14,6 +14,9 @@ return type mismatch in function declared to return numeric
 
 
 check type 
+using COUNT(*) potentially range of large number 
+using BIGINT is a better option
+
 
 SELECT pg_typeof(COUNT(*)) FROM customer;
 
