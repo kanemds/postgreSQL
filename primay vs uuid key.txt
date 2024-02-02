@@ -1,0 +1,23 @@
+
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE TABLE terms (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+);
+
+
+
+auto increment number 1++
+
+CREATE TABLE terms(
+    id SERIAL PRIMARY KEY
+);
+
+
+$data = ['1','2,','3','4']
+let say 2 is deleted
+
+
+$data = ['1','2,','4']
+
+also people may guess the next index number === key
