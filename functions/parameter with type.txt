@@ -1,0 +1,24 @@
+
+no , in between the 2 (value type) not (value , type)
+
+CREATE OR REPLACE FUNCTION fn_get_number_customers_from_state(state_name CHAR(3))
+RETURNS BIGINT AS
+$$
+    SELECT COUNT(*)
+    FROM customer
+    WHERE state = state_name;
+$$
+LANGUAGE SQL
+
+
+multiples parameters
+
+CREATE OR REPLACE FUNCTION fu_get_number_orders_from_customer(cus_fname VARCHAR, cus_lname VARCHAR)
+RETURNS BIGINT AS
+$$
+    SELECT COUNT(*)
+    FROM sales_order
+    NATURAL JOIN customer
+    WHERE customer.first_name = cus_fname AND customer.last_name = cus_lname;
+$$
+LANGUAGE SQL
